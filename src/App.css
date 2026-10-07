@@ -1,0 +1,462 @@
+/* =========================
+   GENERAL
+========================= */
+
+.app {
+  min-height: 100vh;
+  background: #fffaf7;
+  color: #241f1c;
+  transition: 0.3s ease;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.main-navbar {
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e85d04 !important;
+}
+
+.main-navbar .nav-link {
+  color: #3d3734;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.main-navbar .nav-link:hover {
+  color: #e85d04;
+}
+
+.theme-button {
+  border: none;
+  background: #f3f3f3;
+  color: #333333;
+  padding: 9px 15px;
+  border-radius: 20px;
+  margin-left: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-button:hover {
+  background: #e85d04;
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff3e8,
+      #ffe0c2
+    );
+}
+
+.hero-content {
+  max-width: 750px;
+  padding: 80px 0;
+}
+
+.hero-badge {
+  display: inline-block;
+  color: #e85d04;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: #e85d04;
+}
+
+.hero-content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #665d58;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 25px;
+  border-radius: 30px;
+  background: #e85d04;
+  color: white;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: #c94e00;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.filter-section {
+  padding: 80px 0 40px;
+}
+
+.products-section {
+  padding: 30px 0 90px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading span {
+  color: #e85d04;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.section-heading p {
+  color: #756d68;
+}
+
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-button {
+  border: 1px solid #dddddd;
+  background: white;
+  color: #55504c;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-button:hover {
+  border-color: #e85d04;
+  color: #e85d04;
+}
+
+.category-button.active {
+  background: #e85d04;
+  color: white;
+  border-color: #e85d04;
+}
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.food-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.food-image {
+  height: 240px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   LIKE
+========================= */
+
+.like-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: #777;
+
+  font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s;
+}
+
+.like-button:hover {
+  transform: scale(1.1);
+}
+
+.like-button.liked {
+  color: #e63946;
+}
+
+
+/* =========================
+   FOOD INFORMATION
+========================= */
+
+.food-card .card-body {
+  padding: 22px;
+}
+
+.food-category {
+  color: #e85d04;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.food-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.food-description {
+  color: #77706b;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #e85d04;
+}
+
+.order-text {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+
+/* =========================
+   FAVORITES COUNTER
+========================= */
+
+.favorites-counter {
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  color: #e85d04;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #241f1c;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h5 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.footer-content p {
+  color: #b9b1ac;
+}
+
+.footer-content span {
+  color: #827a75;
+  font-size: 0.85rem;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+  background: #151515;
+  color: #f5f5f5;
+}
+
+.dark-mode .main-navbar {
+  background: #1c1c1c;
+  border-color: #333333;
+}
+
+.dark-mode .main-navbar .nav-link {
+  color: #eeeeee;
+}
+
+.dark-mode .theme-button {
+  background: #333333;
+  color: white;
+}
+
+.dark-mode .hero-section {
+  background:
+    linear-gradient(
+      135deg,
+      #21170f,
+      #352015
+    );
+}
+
+.dark-mode .hero-content p {
+  color: #c9c2bd;
+}
+
+.dark-mode .section-heading p {
+  color: #aaa39e;
+}
+
+.dark-mode .category-button {
+  background: #252525;
+  border-color: #444444;
+  color: #eeeeee;
+}
+
+.dark-mode .category-button.active {
+  background: #e85d04;
+  border-color: #e85d04;
+}
+
+.dark-mode .food-card {
+  background: #242424;
+  color: #eeeeee;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .food-description {
+  color: #aaa39e;
+}
+
+.dark-mode .like-button {
+  background: #333333;
+  color: #cccccc;
+}
+
+.dark-mode .order-text {
+  color: #aaa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    padding: 60px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .filter-section {
+    padding-top: 60px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .theme-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+}
